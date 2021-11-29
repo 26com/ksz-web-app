@@ -1,0 +1,46 @@
+.documents-container{
+  padding: 40px 6%;
+  min-height: 80vh;
+}
+
+.documents-section {
+  margin-bottom: 5%;
+}
+
+.documents-section-title{
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.documents-section-content{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.documents-section-item{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  width: 32%;
+  margin: 1rem 0;
+}
+.documents-section-item.md{
+  width: 48%;
+}
+.documents-section-item.sm{
+  width: 100%;
+}
+
+.document-name{
+  font-size: 1.2rem;
+  margin: 1.5rem;
+}
+
+.documents-section-item img{
+  width: 100%;
+  border-radius: 10px;
+}

@@ -1,0 +1,100 @@
+.reviews-container{
+  padding: 40px 5% 0 5%;
+  overflow: hidden;
+}
+.reviews-carousel-btn{
+  margin: 5px !important;
+}
+
+.reviews-carousel-item{
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  margin: 20px;
+  min-height: 40vh;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  text-align: left;
+  padding: 25px;
+}
+.reviews-container.sm 
+.reviews-carousel-item{
+  padding-top: 60px;
+}
+
+.carousel.carousel-slider{
+  overflow: visible;
+}
+
+.reviews-carousel-label{
+  margin-left: 20px;
+}
+
+.reviews-carousel-next{
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: -80px 40px;
+  cursor: pointer;
+  font-size: 70px;
+  z-index: 9000;
+  color: #0093C1;
+  opacity: 0.7;
+}
+.reviews-carousel-prev{
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: -80px 130px;
+  cursor: pointer;
+  font-size: 70px;
+  z-index: 9000;
+  color: #0093C1;
+  opacity: 0.7;
+}
+
+.reviews-container .carousel .control-dots{
+  margin: -50px 0px;
+}
+
+.carousel .control-dots .dot {
+  margin: 0 5px;
+}
+
+.reviews-estimate{
+  position: absolute;
+  top: 50px;
+  right: 50px;
+}
+.reviews-container.sm 
+.reviews-estimate{
+  left: 40px;
+}
+.reviews-stars{
+  color: #0093C1 !important;
+}
+/* .reviews-text{
+  text-align: left;
+  padding: 25px;
+} */
+.reviews-title{
+  font-size: 1.5rem;
+}
+.reviews-content{
+  margin: 30px 0;
+  font-size: 1.3rem;
+  color: #7A7A7A;
+}
+
+.reviews-container.sm
+.reviews-content{
+  font-size: 1.1rem;
+}
+.reviews-date{
+  font-size: 1.3rem;
+}
+
+.reviews-btn-container{
+  text-align: center;
+  margin-top: 80px;
+}

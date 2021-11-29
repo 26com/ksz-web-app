@@ -1,0 +1,18 @@
+.widget-users-container{
+  min-height: 80vh;
+}
+
+.widget-users-container .user-card .filial-times
+{
+  display: none !important;
+}
+
+.widget-users-container .v-input{
+  width: 110%;
+  max-width: 110%;
+  height: 15vh;
+  padding: 10vh 5%;
+  margin-top: -18vh;
+  margin-left: -5%;
+  background-color: #fff;
+}

@@ -1,0 +1,11 @@
+.list-item{
+  max-width: 50vw;
+}
+.list-item.logo{
+  min-height: 12vh;
+  max-width: 60vw;
+}
+.list-item img{
+  max-width: 100%;
+}
+

@@ -1,0 +1,49 @@
+.users-container{
+  padding: 40px 6%;
+  background-color: #FAFAFA;
+}
+.main-carousel-btn{
+  margin: 5px !important;
+}
+
+.users-carousel-item{
+  /* margin: 20px; */
+  text-align: center;
+  cursor: pointer;
+}
+.users-carousel-item img{
+  width: 100%;
+  border-radius: 50px;
+}
+
+.users-carousel-item.sm img{
+  width: 70%;
+}
+
+.carousel.carousel-slider{
+  overflow: visible;
+}
+
+.users-carousel-label{
+  margin-left: 20px;
+}
+
+.user-name{
+  font-size: 1.2em;
+}
+.user-special{
+  font-size: 1.2rem;
+  color: #7A7A7A;
+}
+
+.users-btn-container{
+  text-align: center;
+  margin-top: 3.5em;
+}
+
+.splide__pagination {
+  bottom: -2.5em;
+}
+.splide__pagination__page.is-active {
+  background: #0093C1;
+}
