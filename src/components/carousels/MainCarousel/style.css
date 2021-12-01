@@ -14,7 +14,8 @@
   background-color: rgb(243, 243, 243);
 }
 .main-carousel-item.sm{
-  background-image: none !important;
+  background-size: cover;
+  background-blend-mode: overlay;
 }
 .main-carousel-btn.sm{
   padding: 10px;
