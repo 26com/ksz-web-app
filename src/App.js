@@ -60,6 +60,7 @@ function App() {
     })
     getContent().then(res => {
       setContent(res.data)
+      document.title = res.data.nameClient
     })
   }, [])
   return (
