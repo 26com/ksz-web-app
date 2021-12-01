@@ -5,7 +5,7 @@ export function Services({setTabValue}) {
   useEffect(() => {
     setTabValue(4)
     const script = document.createElement("script")
-    script.src = `${window.config.apiUrl}/widgets/get-user-widget.js?v=` + Date.now()
+    script.src = `${window.apiConfig.url}/widgets/get-user-widget.js?v=` + Date.now()
     script.async = true
     document.body.appendChild(script)
     window.location.replace('#/services')

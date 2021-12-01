@@ -7,7 +7,7 @@ export function Appointment({setTabValue}) {
   useEffect(() => {
     setTabValue(false)
     const script = document.createElement("script")
-    script.src = `${window.config.apiUrl}/widgets/get-user-widget.js?themeColor=&v=` + Date.now()
+    script.src = `${window.apiConfig.url}/widgets/get-user-widget.js?themeColor=&v=` + Date.now()
     script.async = true
     document.body.appendChild(script)
     window.location.replace('#/')
