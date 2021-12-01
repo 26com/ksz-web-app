@@ -50,7 +50,7 @@ export function UsersCarousel({setUser}){
         {users.map(user => (
           <SplideSlide key={user.id}>
             <div className={"users-carousel-item " + size} key={user.id} onClick={() => {clickHandler(user.id)}}>
-              <img src={config.apiUrl + '/file/get-user-photo?idUser=' + user.id} alt="user"/><br />
+              <img src={config.apiUrl + '/file/get-user-photo?idUser=' + user.id + '&size=middle'} alt="user"/><br />
               <span className="user-name">{user.surname} {user.name} {user.middleName}</span>
               {user.specials && user.specials.map((special, index) => (
                 <div key={index}>

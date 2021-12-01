@@ -14,8 +14,8 @@
   align-items: center;
 }
 .header-nav{
-  font-size: 1.3em;
-  font-weight: bold;
+  font-size: 1em;
+  /* font-weight: bold; */
 }
 .about-menu-icon{
   opacity: 0.7;

@@ -14,12 +14,12 @@ export function Home({content, setTabValue, setUser}) {
   window.scrollTo({ top: 0, behavior: 'smooth' })
   return (
     <>
-    {content.slides && <MainCarousel />}
-    {content.siteMainContent && <MainContainer />}
+    {!!content.slides && <MainCarousel />}
+    {!!content.siteMainContent && <MainContainer />}
     <UsersCarousel setUser={setUser}/>
-    {content.news && <NewsCarousel />}
-    {content.reviews?.length && <ReviewsCarousel />}
-    {content.appContacts && <Contacts />}
+    {!!content.news && <NewsCarousel />}
+    {!!content.reviews?.length && <ReviewsCarousel />}
+    {!!content.appContacts && <Contacts />}
     </>
   )
 }

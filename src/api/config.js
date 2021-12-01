@@ -1,6 +1,6 @@
 const config = {};
 
-config.url = 'http://localhost:3000'; // Url
-config.apiUrl = 'http://health-ks-api:8088'; // Url api
+// config.url = 'http://localhost:3000'; // Url
+config.apiUrl = 'https://api.doctorznaet.online'; // Url api
 
 export default config
