@@ -27,20 +27,14 @@ import {
 export const ContentContext = React.createContext({})
 
 function App() {
-  const theme = createTheme({
+  const [theme, setTheme] = useState(createTheme({
     palette: {
       primary: {
-        main: '#0093c1',
+        main: '#ccc',
         contrastText: '#fff',
       },
-      secondary: {
-        light: '#ff7961',
-        main: '#f44336',
-        dark: '#ba000d',
-        contrastText: '#000',
-      },
     },
-  });
+  }))
 
   function formateSize(size){
     if (size >= 1400) return 'lg'
@@ -61,6 +55,17 @@ function App() {
     getContent().then(res => {
       setContent(res.data)
       document.title = res.data.nameClient
+      if (res.data.siteThemeColor) {
+        document.documentElement.style.setProperty("--primary-site-color", res.data.siteThemeColor)
+        setTheme(createTheme({
+          palette: {
+            primary: {
+              main: res.data.siteThemeColor,
+              contrastText: '#fff',
+            },
+          },
+        }))
+      }
     })
   }, [])
   return (
