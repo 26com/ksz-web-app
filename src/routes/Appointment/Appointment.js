@@ -1,5 +1,6 @@
 import {React, useEffect} from "react";
 
+import config from '../../api/config'
 import './style.css'
 
 export function Appointment({setTabValue}) {
@@ -7,7 +8,7 @@ export function Appointment({setTabValue}) {
   useEffect(() => {
     setTabValue(false)
     const script = document.createElement("script")
-    script.src = `http://health-ks-api:8088/widgets/get-user-widget.js?themeColor=&v=` + Date.now()
+    script.src = `${config.apiUrl}/widgets/get-user-widget.js?themeColor=&v=` + Date.now()
     script.async = true
     document.body.appendChild(script)
     window.location.replace('#/')
