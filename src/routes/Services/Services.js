@@ -1,13 +1,11 @@
 import {React, useEffect} from "react";
 
-import config from '../../api/config'
-
 export function Services({setTabValue}) {
   window.scrollTo({ top: 0, behavior: 'smooth' })
   useEffect(() => {
     setTabValue(4)
     const script = document.createElement("script")
-    script.src = `${config.apiUrl}/widgets/get-user-widget.js?v=` + Date.now()
+    script.src = `${window.config.apiUrl}/widgets/get-user-widget.js?v=` + Date.now()
     script.async = true
     document.body.appendChild(script)
     window.location.replace('#/services')

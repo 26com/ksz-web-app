@@ -1,9 +1,7 @@
 import axios from 'axios'
 
-import config from './config'
-
 const clientAPI = axios.create({
-  baseURL: config.apiUrl,
+  baseURL: window.config.apiUrl,
 });
 
 export function getContent() {
