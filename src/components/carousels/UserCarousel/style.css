@@ -45,5 +45,5 @@
   bottom: -2.5em;
 }
 .splide__pagination__page.is-active {
-  background: #0093C1;
+  background: var(--primary-site-color);
 }

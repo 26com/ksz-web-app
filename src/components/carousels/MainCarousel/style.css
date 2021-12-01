@@ -46,5 +46,5 @@
 
 .carousel .control-dots .dot.selected, 
 .carousel .control-dots .dot:hover{
-  background: #2196F3;
+  background: var(--primary-site-color);
 }

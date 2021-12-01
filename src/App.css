@@ -1,3 +1,7 @@
+:root{
+  --primary-site-color: #0093c1;
+}
+
 body {
   padding: 0 !important;
 }

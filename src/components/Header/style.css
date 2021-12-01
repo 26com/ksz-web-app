@@ -34,7 +34,7 @@
 }
 
 .left-menu-btn{
-  color: #0093C1;
+  color: var(--primary-site-color);
   font-size: 1.5rem;
   cursor: pointer;
 }

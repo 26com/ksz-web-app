@@ -23,13 +23,13 @@
 
 .custom-button.contained{
   color: #fff;
-  background-color: #0093C1;
+  background-color: var(--primary-site-color);
   border: none;
 }
 .custom-button.outlined{
-  color: #0093C1;
+  color: var(--primary-site-color);
   background: none;
-  border: 1px solid #0093C1;
+  border: 1px solid var(--primary-site-color);
   border-radius: 30px;
 }
 .custom-button.outlined:hover{
