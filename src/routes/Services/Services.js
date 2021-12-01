@@ -16,7 +16,7 @@ export function Services({setTabValue}) {
       if (widget) widget.remove()
       script.remove()
     }
-  }, [])
+  }, [setTabValue])
   return (
     <div style={{minHeight: '80vh'}}>
       <div style={{width: '100%', height: '100%'}} id="users_widget"></div>

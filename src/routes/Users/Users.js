@@ -1,5 +1,4 @@
 import {React, useEffect} from "react";
-import { useSearchParams } from "react-router-dom";
 
 import './style.css'
 
@@ -21,7 +20,7 @@ export function Users({setTabValue, currentUser, setCurrentUser}) {
       if (widget) widget.remove()
       script.remove()
     }
-  }, [])
+  }, [setTabValue, currentUser, setCurrentUser])
   return (
     <div className="widget-users-container">
       <div style={{width: '100%', height: '100%'}} id="users_widget"></div>

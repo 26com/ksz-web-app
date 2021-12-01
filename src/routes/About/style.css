@@ -2,3 +2,8 @@
   padding: 40px 6%;
   min-height: 80vh;
 }
+
+.about-container.sm
+.main-container-content{
+  display: block !important;
+}

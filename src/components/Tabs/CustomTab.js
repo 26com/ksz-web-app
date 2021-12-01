@@ -8,6 +8,10 @@ function LinkTab(props) {
     <Tab
       component="a"
       onClick={(event) => {
+        if (props.href) {
+          window.location = props.href
+          return
+        }
         event.preventDefault();
         navigate('/' + props.link)
       }}

@@ -6,12 +6,12 @@ import { CrmNews } from "../../components/carousels/NewsCarousel/components/CrmN
 import './style.css'
 
 export function News({content, size, setTabValue}) {
-  let [searchParams, setSearchParams] = useSearchParams();
+  let [searchParams] = useSearchParams();
   window.scrollTo({ top: 0, behavior: 'smooth' })
   const newsId = searchParams.get('id')
   React.useEffect(() => {
     setTabValue(false)
-  })
+  }, [setTabValue])
   return (
     <>
     {(!newsId && newsId !== 0) &&
