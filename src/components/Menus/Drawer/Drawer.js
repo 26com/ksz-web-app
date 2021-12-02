@@ -47,78 +47,78 @@ export default function TemporaryDrawer({toggleMenu, open, address, email, logoU
       </List>
       <Divider />
       <List onClick={() => {toggleMenu(false)}} >
-        <ListItem button>
-          <ListItemIcon>
-            <HomeOutlinedIcon />
-          </ListItemIcon>
-          <Link to="/" className="list-item">
-            Главная
-          </Link>
-        </ListItem>
-        <ListItem button>
-          <ListItemIcon>
-            <InfoOutlinedIcon />
-          </ListItemIcon>
-          <Link to="/about" className="list-item">
-            О нас
-          </Link>
-        </ListItem>
-        <ListItem button>
-          <ListItemIcon>
-            <FeedIcon />
-          </ListItemIcon>
-          <Link to="/news" className="list-item">
-            Новости
-          </Link>
-        </ListItem>
-        <ListItem button>
-          <ListItemIcon>
-            <DescriptionOutlinedIcon />
-          </ListItemIcon>
-          <Link to="/documents" className="list-item">
-            Документация
-          </Link>
-        </ListItem>
-        <ListItem button>
-          <ListItemIcon>
-            <PeopleAltOutlinedIcon />
-          </ListItemIcon>
-          <Link to="/users" className="list-item">
-            Врачи
-          </Link>
-        </ListItem>
-        <ListItem button>
-          <ListItemIcon>
-            <MedicalServicesOutlinedIcon />
-          </ListItemIcon>
-          <Link to="/services" className="list-item">
-            Услуги
-          </Link>
-        </ListItem>
-        <ListItem button>
-          <ListItemIcon>
-            <ContactPageOutlinedIcon />
-          </ListItemIcon>
-          <Link to="/contacts" className="list-item">
-            Контакты
-          </Link>
-        </ListItem>
-        <ListItem button>
-          <ListItemIcon>
-            <LoginIcon />
-          </ListItemIcon>
-          <a href={appSiteUrl} className="list-item">
-            Личный кабинет
-          </a>
-        </ListItem>
-        <ListItem button>
-          <ListItemIcon>
-            <EventAvailableIcon />
-          </ListItemIcon>
-          <Link to="/appointment" className="list-item">
-            Записаться на прием
-          </Link>
-        </ListItem>
+        <Link to="/" className="list-item">
+          <ListItem button>
+            <ListItemIcon>
+              <HomeOutlinedIcon />
+            </ListItemIcon>
+              Главная
+          </ListItem>
+        </Link>
+        <Link to="/about" className="list-item">
+          <ListItem button>
+            <ListItemIcon>
+              <InfoOutlinedIcon />
+            </ListItemIcon>
+              О нас
+          </ListItem>
+        </Link>
+        <Link to="/news" className="list-item">
+          <ListItem button>
+            <ListItemIcon>
+              <FeedIcon />
+            </ListItemIcon>
+              Новости
+          </ListItem>
+        </Link>
+        <Link to="/documents" className="list-item">
+          <ListItem button>
+            <ListItemIcon>
+              <DescriptionOutlinedIcon />
+            </ListItemIcon>
+              Документация
+          </ListItem>
+        </Link>
+        <Link to="/users" className="list-item">
+          <ListItem button>
+            <ListItemIcon>
+              <PeopleAltOutlinedIcon />
+            </ListItemIcon>
+              Врачи
+          </ListItem>
+        </Link>
+        <Link to="/services" className="list-item">
+          <ListItem button>
+            <ListItemIcon>
+              <MedicalServicesOutlinedIcon />
+            </ListItemIcon>
+              Услуги
+          </ListItem>
+        </Link>
+        <Link to="/contacts" className="list-item">
+          <ListItem button>
+            <ListItemIcon>
+              <ContactPageOutlinedIcon />
+            </ListItemIcon>
+              Контакты
+          </ListItem>
+        </Link>
+        <a href={appSiteUrl} className="list-item">
+          <ListItem button>
+            <ListItemIcon>
+              <LoginIcon />
+            </ListItemIcon>
+              Личный кабинет
+          </ListItem>
+        </a>
+        <Link to="/appointment" className="list-item">
+          <ListItem button>
+            <ListItemIcon>
+              <EventAvailableIcon />
+            </ListItemIcon>
+              Записаться на прием
+          </ListItem>
+        </Link>
       </List>
     </>
   );
