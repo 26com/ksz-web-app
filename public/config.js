@@ -1,4 +1,4 @@
 var apiConfig = {};
 
 // config.url = 'http://localhost:3000'; // Url
-apiConfig.url = 'https://api.doctorznaet.online'; // Url api
+apiConfig.url = 'http://health-ks-api:8088'; // Url api

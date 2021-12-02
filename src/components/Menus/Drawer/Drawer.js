@@ -21,7 +21,7 @@ import './style.css'
 
 export default function TemporaryDrawer({toggleMenu, open, address, email, logoUrl, appSiteUrl}) {
   const list = () => (
-    <>
+    <div className="drawer-container">
       <List onClick={() => {toggleMenu(false)}}>
           <ListItem>
             <Link to="/" className="list-item logo">
@@ -120,7 +120,7 @@ export default function TemporaryDrawer({toggleMenu, open, address, email, logoU
           </ListItem>
         </Link>
       </List>
-    </>
+    </div>
   );
 
   return (

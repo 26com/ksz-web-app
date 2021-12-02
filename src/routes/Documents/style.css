@@ -2,6 +2,9 @@
   padding: 40px 6%;
   min-height: 80vh;
 }
+.documents-container a{
+  color: #171717;
+}
 
 .documents-section {
   margin-bottom: 5%;
