@@ -12,8 +12,8 @@ import './style.css'
 export function UsersCarousel({setUser}){
   const navigate = useNavigate()
   const {size} = useContext(ContentContext)
-  let perPage = 5
-  if (size === 'md') perPage = 3
+  let perPage = 7
+  if (size === 'md') perPage = 5
   if (size === 'sm') perPage = 1
 
   const [users, setUsers] = useState([])

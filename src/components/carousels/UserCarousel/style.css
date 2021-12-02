@@ -14,6 +14,7 @@
 .users-carousel-item img{
   width: 100%;
   border-radius: 50px;
+  margin-bottom: 15px;
 }
 
 .users-carousel-item.sm img{
