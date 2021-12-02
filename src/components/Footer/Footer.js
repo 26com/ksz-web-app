@@ -81,9 +81,9 @@ export function Footer(){
           <ul>
             <li className="phone">
               <i className="fas fa-phone"></i>
-              <Link to={'tel:' + phone}>
+              <a href={'tel:' + phone}>
                 {content.phoneWork}
-              </Link>
+              </a>
             </li>
             <li className="email">
               <i className="fas fa-envelope"></i>
