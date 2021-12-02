@@ -26,7 +26,9 @@ export function Footer(){
           </div>
           <div className="schedule">
             <i className="fas fa-clock"></i>
-            {content.siteWorkSchedule}
+            <span style={{whiteSpace: 'pre-line'}}>
+              {content.siteWorkSchedule}
+            </span>
           </div>
         </div>
         <div className="footer-about">
