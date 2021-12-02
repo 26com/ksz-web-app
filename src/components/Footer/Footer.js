@@ -87,21 +87,19 @@ export function Footer(){
             </li>
             <li className="email">
               <i className="fas fa-envelope"></i>
-              <Link to={'mailto:' + content.companyEmail}>
+              <a href={'mailto:' + content.companyEmail}>
                 {content.companyEmail}
-              </Link> 
+              </a> 
             </li>
           </ul>
         </div>
       </div>
       <div className="footer-bar">
         <div className="copyright">
-          <i className="far fa-copyright"></i>
-          {year}
-          Официальный сайт {content.nameClientShort}
+          © {year} Официальный сайт {content.nameClientShort}
         </div>
         <div className="developer">
-          Разработано: ООО "Кибер-Софт"
+          <a href="https://kiber-soft.net" target="_blank">Разработано: ООО "Кибер-Софт"</a>
         </div>
       </div>
     </footer>

@@ -12,6 +12,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-family: 'Inter', sans-serif !important;
 }
 .header-nav{
   font-size: 1em;
@@ -28,9 +29,6 @@
 }
 .header-contacts{
   font-size: 1.2em;
-}
-.phone{
-  font-weight: bold;
 }
 
 .left-menu-btn{

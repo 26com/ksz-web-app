@@ -36,7 +36,11 @@ export default function Header({value, setValue}){
       {size === 'lg' && 
         <div className="header-info">
           <div className="header-address">{content.addressActual}</div>
-          <div className="header-email">{content.companyEmail}</div>
+          <div className="header-email">
+          <a href={'mailto:' + content.companyEmail}>
+              {content.companyEmail}
+            </a>
+          </div>
         </div>
       }
       <div className="header-menu">
@@ -64,10 +68,6 @@ export default function Header({value, setValue}){
           <CustomButton variant="contained" localHref="/appointment">
             Записаться на прием
           </CustomButton>
-        </div>
-        <div className="header-contacts">
-          <div className="phone">8(8652)33-38-33</div>
-          <div className="schedule">c 8:00 до 20:00</div>
         </div>
         </>
         }

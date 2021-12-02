@@ -1,5 +1,8 @@
 .widget-users-container{
+  max-width: 100vw;
+  overflow: hidden;
   min-height: 80vh;
+  margin-bottom: 12px;
 }
 
 .widget-users-container .user-card .filial-times
