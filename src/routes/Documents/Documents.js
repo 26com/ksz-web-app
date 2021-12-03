@@ -6,7 +6,7 @@ import './style.css'
 export function Documents({content, size, setTabValue}) {
   React.useEffect(() => {
     setTabValue(2)
-  })
+  }, [])
   window.scrollTo({ top: 0, behavior: 'smooth' })
   const sectionsFormat = () => {
     const result = {}
@@ -33,8 +33,6 @@ export function Documents({content, size, setTabValue}) {
               <div className={"documents-section-item " + size} key={document.id}>
                 <a href={document.url} target="_blank">
                   <div className="document-name">{document.name}</div>
-                </a>
-                <a href={document.url} target="_blank">
                   <img src={documentImg} alt="document" />
                 </a>
               </div>

@@ -18,13 +18,14 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: flex-start;
   width: 100%;
 }
 
 .documents-section-item{
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-between; */
   border: 1px solid #ccc;
   border-radius: 10px;
   width: 32%;
