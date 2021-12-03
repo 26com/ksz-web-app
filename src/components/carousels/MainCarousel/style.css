@@ -17,6 +17,14 @@
   background-size: cover;
   background-blend-mode: overlay;
 }
+.main-carousel-item
+.carousel-item-html{
+  max-width: 50%;
+}
+.main-carousel-item.sm
+.carousel-item-html{
+  max-width: 90%;
+}
 .main-carousel-btn.sm{
   padding: 10px;
 }

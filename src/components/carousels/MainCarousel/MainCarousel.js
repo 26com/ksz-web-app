@@ -12,7 +12,7 @@ export function MainCarousel(){
   const {content, size} = useContext(ContentContext)
   return (
     <div className="main-carousel-container">
-      <Splide options={ {
+      <Splide options={ { 
         type: 'loop',
         rewind: true,
         width: '100%',
@@ -27,7 +27,7 @@ export function MainCarousel(){
           return (
             <SplideSlide key={item.id}>
             <div className={"main-carousel-item " + size} style={{backgroundImage: `url("${item.image}")`}} key={item.id}>
-              <div dangerouslySetInnerHTML={{ __html: item.content }} style={{maxWidth: '50%'}}/>
+              <div dangerouslySetInnerHTML={{ __html: item.content }} className="carousel-item-html" />
               {item.mainButtonTitle &&
                 <CustomButton 
                   variant="contained" 
