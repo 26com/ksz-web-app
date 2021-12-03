@@ -13,9 +13,6 @@ export function About({content, setTabValue}) {
     <div className={"about-container " + size}>
       <div dangerouslySetInnerHTML={{__html: content.siteMainContent}}></div>
       <div dangerouslySetInnerHTML={{__html: content.siteAbout}}></div>
-      <div className="contacts-map">
-        <iframe src={content.appMapIframe} title="map" style={{marginTop: '40px'}}></iframe>
-      </div>
     </div>
   )
 }
