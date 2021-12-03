@@ -1,12 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import CustomButton from '../../../buttons/CustomButton/CustomButton';
 
 export function CrmNews({news, size, id}){
   return (
     <div className={"news-carousel-item " + size}>
-      {/* <div className={"news-media " + size} style={{backgroundImage: `url("${news.image}")`}}></div> */}
-      <img src={news.image} style={{width: '100%', borderTopLeftRadius: '50px', borderTopRightRadius: '50px'}} alt="news-media"></img>
+      <Link to={'/news?id=' + id} className="list-item">
+        <img src={news.image} style={{width: '100%', borderTopLeftRadius: '50px', borderTopRightRadius: '50px'}} alt="news-media"></img>
+      </Link>
       <div className="news-text-content">
         <div className="news-text">
           <span className="news-title">{news.title}</span><br />

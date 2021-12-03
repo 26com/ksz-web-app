@@ -1,6 +1,7 @@
 import React, {useState, useRef, useEffect} from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlayCircle } from '@fortawesome/free-solid-svg-icons'
+import { Link } from "react-router-dom";
 
 import CustomButton from '../../../buttons/CustomButton/CustomButton';
 
@@ -16,8 +17,9 @@ export function InstagramNews({news, size, id}){
   return (
     <div className="news-carousel-item">
       {(news.instagramMediaType === 'IMAGE' || news.instagramMediaType === 'CAROUSEL_ALBUM') && 
-        // <div className={"news-media " + size} style={{backgroundImage: `url("${news.instagramMediaUrl}")`}}></div>
-        <img src={news.instagramMediaUrl} style={{width: '100%', borderTopLeftRadius: '50px', borderTopRightRadius: '50px'}} alt="news-media"></img>
+        <Link to={'/news?id=' + id} className="list-item">
+          <img src={news.instagramMediaUrl} style={{width: '100%', borderTopLeftRadius: '50px', borderTopRightRadius: '50px'}} alt="news-media"></img>
+        </Link>
       }
       {news.instagramMediaType === 'VIDEO' &&
         <>
