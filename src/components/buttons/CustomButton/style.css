@@ -25,6 +25,7 @@
   color: #fff;
   background-color: var(--primary-site-color);
   border: none;
+  border-radius: 30px;
 }
 .custom-button.outlined{
   color: var(--primary-site-color);
