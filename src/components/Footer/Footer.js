@@ -94,12 +94,12 @@ export function Footer(){
           </ul>
         </div>
       </div>
-      <div className="footer-bar">
+      <div className={"footer-bar " + size}>
         <div className="copyright">
           © {year} Официальный сайт {content.nameClientShort}
         </div>
         <div className="developer">
-          <a href="https://kiber-soft.net" target="_blank">Разработано: ООО "Кибер-Софт"</a>
+          Разработано:<a href="https://kiber-soft.net" target="_blank"> ООО "Кибер-Софт"</a>
         </div>
       </div>
     </footer>

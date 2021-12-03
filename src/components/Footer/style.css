@@ -4,6 +4,9 @@
   background-color: #F3F3F3;
   padding: 40px 6%;
 }
+.footer-container a{
+  color: #171717;
+}
 .footer-container.sm{
   flex-wrap: wrap;
 }
@@ -42,4 +45,11 @@
   background-color: #F3F3F3;
   border-top: 1px solid #ccc;
   font-size: 0.8rem;
+}
+.footer-bar.sm{
+  display: block;
+}
+.footer-bar.sm
+.copyright{
+  margin-bottom: 8px;
 }
