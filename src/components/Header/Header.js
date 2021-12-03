@@ -57,7 +57,7 @@ export default function Header({value, setValue}){
               <CustomTab label="Главная" link="" />
               <CustomTab label="О нас" link="about" />
               <CustomTab label="Документация" link="documents" />
-              <CustomTab label="Врачи" link="users" />
+              <CustomTab label="Врачи" link="doctors" />
               <CustomTab label="Услуги" link="services" />
               <CustomTab label="Контакты" link="contacts" />
               <CustomTab label="Личный кабинет" href={content.appSiteUrl}/>
