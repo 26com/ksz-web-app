@@ -12,3 +12,7 @@
   max-width: 100%;
 }
 
+.list-item.primary-color{
+  color: var(--primary-site-color);
+}
+

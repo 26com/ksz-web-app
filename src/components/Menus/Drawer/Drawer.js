@@ -103,7 +103,7 @@ export default function TemporaryDrawer({toggleMenu, open, address, email, logoU
               Контакты
           </ListItem>
         </Link>
-        <a href={appSiteUrl} className="list-item">
+        <a href={appSiteUrl} className="list-item primary-color">
           <ListItem button>
             <ListItemIcon>
               <LoginIcon />
