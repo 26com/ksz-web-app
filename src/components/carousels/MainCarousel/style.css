@@ -3,10 +3,9 @@
   overflow: hidden;
 }
 .main-carousel-item{
-  width: 100%;
   min-height: 50vh;
   font-size: 1.4rem;
-  padding: 40px 6%;
+  padding: 40px 5%;
   text-align: left;
   background-size: contain;
   background-repeat: no-repeat;
@@ -14,6 +13,7 @@
   background-color: rgb(243, 243, 243);
 }
 .main-carousel-item.sm{
+  font-size: 0.9rem;
   background-size: cover;
   background-blend-mode: overlay;
 }

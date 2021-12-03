@@ -8,6 +8,7 @@ import { Home } from './routes/Home/Home';
 import { About } from './routes/About/About';
 import { Contacts } from './routes/Contacts/Contacts';
 import { Users } from './routes/Users/Users';
+import { Doctors } from './routes/Doctors/Doctors';
 import { Services } from './routes/Services/Services';
 import { Documents } from './routes/Documents/Documents';
 import { News } from './routes/News/News';
@@ -46,6 +47,7 @@ function App() {
   const [size, setSize] = useState(formateSize(window.innerWidth))
   const [tabValue, setTabValue] = useState(0)
   const [currentUser, setCurrentUser] = useState(null)
+  const [users, setUsers] = useState({})
 
   useEffect(() => {
     localStorage.age = 18
@@ -78,9 +80,10 @@ function App() {
               <>
               <Header value={tabValue} setValue={setTabValue} />
               <Routes>
-                <Route path="/" element={<Home content={content} setTabValue={setTabValue} setUser={setCurrentUser} />} />
+                <Route path="/" element={<Home content={content} setTabValue={setTabValue} setUser={setCurrentUser} setUsers={setUsers}/>} />
                 <Route path="/about" element={<About content={content} setTabValue={setTabValue} />} />
                 <Route path="/users" element={<Users setTabValue={setTabValue} setCurrentUser={setCurrentUser} currentUser={currentUser} />} />
+                <Route path="/doctors" element={<Doctors setTabValue={setTabValue} setCurrentUser={setCurrentUser} users={users} setUser={setCurrentUser}/>} />
                 <Route path="/services" element={<Services setTabValue={setTabValue} />} />
                 <Route path="/documents" element={<Documents content={content} size={size} setTabValue={setTabValue} />} />
                 <Route path="/contacts" element={<Contacts content={content} setTabValue={setTabValue} />} />

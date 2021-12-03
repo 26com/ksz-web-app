@@ -79,7 +79,7 @@ export default function TemporaryDrawer({toggleMenu, open, address, email, logoU
               Документация
           </ListItem>
         </Link>
-        <Link to="/users" className="list-item">
+        <Link to="/doctors" className="list-item">
           <ListItem button>
             <ListItemIcon>
               <PeopleAltOutlinedIcon />

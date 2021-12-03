@@ -25,6 +25,7 @@ export function NewsCarousel(){
     return sortNews
   } 
   let perPage = 1
+  if (size === 'md') perPage = 2
   if (size === 'lg') perPage = 3
   return (
     <div className="news-container">

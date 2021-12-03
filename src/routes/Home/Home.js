@@ -7,16 +7,16 @@ import { NewsCarousel } from "../../components/carousels/NewsCarousel/NewsCarous
 import { ReviewsCarousel } from "../../components/carousels/ReviewsCarousel/ReviewsCarousel";
 import { Contacts } from "../../components/Contacts/Contacts";
 
-export function Home({content, setTabValue, setUser}) {
+export function Home({content, setTabValue, setUser, setUsers}) {
   React.useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
     setTabValue(0)
-  })
-  window.scrollTo({ top: 0, behavior: 'smooth' })
+  }, [])
   return (
     <>
     {!!content.slides && <MainCarousel />}
     {!!content.siteMainContent && <MainContainer />}
-    <UsersCarousel setUser={setUser}/>
+    <UsersCarousel setUser={setUser} setUsersStore={setUsers} />
     {!!content.news && <NewsCarousel />}
     {!!content.reviews?.length && <ReviewsCarousel />}
     {!!content.appContacts && <Contacts />}
