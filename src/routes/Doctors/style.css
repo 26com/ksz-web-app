@@ -2,5 +2,36 @@
   padding: 40px 6%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
+}
+
+.doctors-search {
+  width: 95%;
+  margin-bottom: 30px;
+}
+.doctors-search input{
+  color: #171717;
+  font-size: 1em;
+  outline: none;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+}
+.doctors-search input:focus{
+  border-bottom: 1px solid var(--primary-site-color);
+}
+
+.input-clear-btn{
+  text-align: center;
+  color: #ccc;
+  width: 5%;
+}
+.input-clear-btn i{
+  cursor: pointer;
+  margin-top: 11px;
+  margin-left: -80%;
+}
+.input-clear-btn i:hover{
+  color: var(--primary-site-color);
 }
