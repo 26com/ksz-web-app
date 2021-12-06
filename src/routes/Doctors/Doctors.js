@@ -52,6 +52,11 @@ export function Doctors({size, setTabValue, users, setUser}) {
       <div className="input-clear-btn">
         <i className="fas fa-times" onClick={inputClearHandler}></i>
       </div>
+      {!(Object.keys(doctors).length) && 
+        <div style={{height: '60vh'}}>
+          <h3 style={{color: '#ccc'}}>Нет подходящих врачей</h3>
+        </div>
+      }
       {Object.keys(doctors).map(key => (
         <div style={{width: imgSize, margin: '15px 10px'}} className={"users-carousel-item " + size} key={users[key].id} onClick={() => {clickHandler(users[key].id)}}>
         <img 
