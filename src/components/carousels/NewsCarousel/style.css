@@ -97,3 +97,7 @@
   text-align: center;
   margin-top: 80px;
 }
+
+.instagramm-img{
+  object-fit: cover;
+}
