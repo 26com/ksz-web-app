@@ -45,7 +45,7 @@ export function Footer(){
               </Link>
             </li>
             <li>
-              <Link to="/users">
+              <Link to="/doctors">
                 Специалисты
               </Link>
             </li>
