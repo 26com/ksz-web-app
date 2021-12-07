@@ -35,3 +35,13 @@
 .input-clear-btn i:hover{
   color: var(--primary-site-color);
 }
+
+/* .doctors-container
+.user-name{
+  text-transform: capitalize;
+} */
+
+.primary-color{
+  color: var(--primary-site-color);
+  font-weight: 500;
+}
