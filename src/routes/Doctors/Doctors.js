@@ -24,7 +24,10 @@ export function Doctors({size, setTabValue, users, setUser}) {
       let fullName = (user.surname +  ' ' + user.name + ' ' + user.middleName)
       if (fullName.toLowerCase().includes(q)) {
         fullName = fullName.replace(q, `<span class="primary-color">${q}</span>`)
-        fullName = fullName.replace(q[0].toUpperCase() + q.slice(1), `<span class="primary-color">${q[0].toUpperCase() + q.slice(1)}</span>`)
+        fullName = fullName.replace(
+          q[0].toUpperCase() + q.slice(1), 
+          `<span class="primary-color">${q[0].toUpperCase() + q.slice(1)}</span>`
+        )
         result[key] = {...user}
         result[key].fullName = fullName
       }
@@ -33,8 +36,14 @@ export function Doctors({size, setTabValue, users, setUser}) {
           if (special.toLowerCase().includes(q)) {
             result[key] = {...user}
             result[key].specials = [...(user.specials)]
-            result[key].specials[index] = result[key].specials[index].replace(q, `<span class="primary-color">${q}</span>`)
-            result[key].specials[index] = result[key].specials[index].replace(q[0].toUpperCase() + q.slice(1), `<span class="primary-color">${q[0].toUpperCase() + q.slice(1)}</span>`)
+            result[key].specials[index] = result[key].specials[index].replace(
+              q, 
+              `<span class="primary-color">${q}</span>`
+            )
+            result[key].specials[index] = result[key].specials[index].replace(
+              q[0].toUpperCase() + q.slice(1), 
+              `<span class="primary-color">${q[0].toUpperCase() + q.slice(1)}</span>`
+            )
           }
         })
       }
