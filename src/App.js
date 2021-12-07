@@ -16,6 +16,7 @@ import { Reviews } from './routes/Reviews/Reviews';
 import { Appointment } from './routes/Appointment/Appointment';
 import { Footer } from './components/Footer/Footer';
 import { Loader } from './components/Loader/Loader';
+import { NotFound } from './components/NotFound/NotFound';
 import { getContent } from './api/api'
 
 import {
@@ -90,6 +91,7 @@ function App() {
                 <Route path="/news" element={<News content={content} size={size} setTabValue={setTabValue} />} />
                 <Route path="/reviews" element={<Reviews content={content} size={size} setTabValue={setTabValue} />} />
                 <Route path="/appointment" element={<Appointment content={content} size={size} setTabValue={setTabValue} />} />
+                <Route path="*" element={<NotFound logo={content.appLogoUrl} />} />
               </Routes>
               <Footer />
               </>
