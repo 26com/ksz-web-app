@@ -11,7 +11,7 @@ export function Home({content, setTabValue, setUser, setUsers}) {
   React.useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
     setTabValue(0)
-  }, [])
+  }, [setTabValue])
   return (
     <>
     {!!content.slides && <MainCarousel />}

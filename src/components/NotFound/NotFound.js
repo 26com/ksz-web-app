@@ -6,7 +6,7 @@ export function NotFound({logo}){
   return (
     <div className="not-found-container">
       <div className="not-found-logo">
-        <img src={logo} />
+        <img src={logo} alt="404"/>
       </div>
       <div className="not-found-content">
         <span>Страница не найдена | 404</span>

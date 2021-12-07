@@ -34,7 +34,7 @@ export function UsersCarousel({setUser, setUsersStore}){
       setUsers(sortUsers(res.data.users))
       setUsersStore(res.data.users)
     })
-  }, [])
+  }, [setUsersStore])
 
   return(
     <div className="users-container">
