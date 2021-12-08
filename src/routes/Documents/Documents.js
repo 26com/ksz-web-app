@@ -4,10 +4,13 @@ import documentImg from '../../assets/images/document.png'
 import './style.css'
 
 export function Documents({content, size, setTabValue}) {
+  // изменение положения ползунка в меню
   React.useEffect(() => {
     setTabValue(2)
   }, [setTabValue])
+  // прокрутка при переходе
   window.scrollTo({ top: 0, behavior: 'smooth' })
+  // разделяемвсе документы по секциям
   const sectionsFormat = () => {
     const result = {}
     content.documents.forEach((document) => {

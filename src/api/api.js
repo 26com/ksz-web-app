@@ -1,9 +1,11 @@
 import axios from 'axios'
 
+// инициализация объекта axios
 const clientAPI = axios.create({
   baseURL: window.apiConfig.url,
 });
 
+// функция получения контента
 export function getContent() {
   try {
     return clientAPI.get('/static/site')
@@ -11,7 +13,7 @@ export function getContent() {
     return null
   }
 }
-
+// функция получения специалистов
 export function getUsers() {
   try {
     return clientAPI.get('/widgets/get-users')

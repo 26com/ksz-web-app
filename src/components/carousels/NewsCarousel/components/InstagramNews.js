@@ -6,15 +6,22 @@ import { Link } from "react-router-dom";
 import CustomButton from '../../../buttons/CustomButton/CustomButton';
 
 export function InstagramNews({news, size, id}){ 
+  // состояние отображения превью на видео
   const [preview, setPreview] = useState(true)
+  // создание ссылки на элемент видео
   const myRef = useRef(null)
+  // создание ссылки на изображение из инстаграма,
+  // для приведения к квадратной форме
   const instImg = useRef(null)
+  // обработка нажатия на воспроизведение видео
   const clickHandler = () => {
     setPreview(false)
   }
+  // хук для воспроизведения видео
   useEffect(() => {
     if (myRef.current) myRef.current.play()
   }, [preview])
+  // хук для изменения размера инстаграм изображения
   useEffect(() => {
     if (instImg.current) {
       const width = instImg.current.clientWidth

@@ -6,9 +6,12 @@ import { ContentContext } from '../../App'
 import './style.css'
 
 export function Footer(){
+  // получение контента и текущего размера экрана из объекта контекста
   const {content, size} = React.useContext(ContentContext)
+  // получение номера телефона для использования в ссылке
   let phone = null
   if (content.phoneWork) phone = content.phoneWork.split(', ')[0]
+  // получение текущего года для отображения
   const year = ' ' + moment().format('YYYY') + ' '
   return (
     <footer>

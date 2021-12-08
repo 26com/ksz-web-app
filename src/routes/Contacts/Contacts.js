@@ -3,7 +3,9 @@ import React from "react";
 import './style.css'
 
 export function Contacts({content, setTabValue}) {
+  // прокрутка при переходе
   window.scrollTo({ top: 0, behavior: 'smooth' })
+  // изменение положения ползунка в меню
   React.useEffect(() => {
     setTabValue(5)
   })

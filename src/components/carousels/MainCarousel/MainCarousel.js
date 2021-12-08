@@ -9,9 +9,12 @@ import CustomButton from '../../buttons/CustomButton/CustomButton';
 import { ContentContext } from '../../../App';
 
 export function MainCarousel(){
+  // подключение переменных из объекта контекста 
+  // (сфйз для адаптива при изменении размера экрана)
   const {content, size} = useContext(ContentContext)
   return (
     <div className="main-carousel-container">
+      {/* инициализация слайдера */}
       <Splide options={ { 
         type: 'loop',
         rewind: true,

@@ -4,7 +4,9 @@ import './style.css'
 import { Review } from "../../components/carousels/ReviewsCarousel/components/Review";
 
 export function Reviews({content, size, setTabValue}) {
+  // прокрутка при переходе
   window.scrollTo({ top: 0, behavior: 'smooth' })
+  // изменение положения ползунка в меню
   React.useEffect(() => {
     setTabValue(false)
   })

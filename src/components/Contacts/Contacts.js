@@ -3,12 +3,14 @@ import { ContentContext } from '../../App';
 import './style.css'
 
 export function Contacts(){
+  // получение данных и текущего размера экрана из объекта контекста
   const {content, size} = React.useContext(ContentContext)
   return(
     <div className={"contacts-container " + size}>
       <h1>Контакты</h1>
       <div className="contacts-content">
         <div className="contacts-text">
+          {/* отображение html полученного с сервера */}
           <div className="contacts-data" dangerouslySetInnerHTML={{ __html: content.appContacts }}></div>
           <div className="contacts-socials">
             {content.siteVkUrl && 

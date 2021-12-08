@@ -8,6 +8,8 @@ import { ReviewsCarousel } from "../../components/carousels/ReviewsCarousel/Revi
 import { Contacts } from "../../components/Contacts/Contacts";
 
 export function Home({content, setTabValue, setUser, setUsers}) {
+  // изменение положения ползунка в меню
+  // прокрутка при переходе
   React.useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
     setTabValue(0)

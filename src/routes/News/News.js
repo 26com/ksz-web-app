@@ -6,14 +6,19 @@ import { CrmNews } from "../../components/carousels/NewsCarousel/components/CrmN
 import './style.css'
 
 export function News({content, size, setTabValue}) {
+  // получение функции для доступа к гет параметрам
   let [searchParams] = useSearchParams();
+  // прокрутка при переходе
   window.scrollTo({ top: 0, behavior: 'smooth' })
+  // получение айди из гет параметров
   const newsId = searchParams.get('id')
+  // изменение положения ползунка в меню
   React.useEffect(() => {
     setTabValue(false)
   }, [setTabValue])
   return (
     <>
+    {/* если не передан айди новости */}
     {(!newsId && newsId !== 0) &&
       <div className="news-route-container">
         {Object.keys(content.news).map(key => {
@@ -35,6 +40,7 @@ export function News({content, size, setTabValue}) {
         })}
       </div>
     }
+    {/* если передан айди и тип crm */}
     {(newsId && content.news[newsId].type === 'crm') && 
       <div className={"current-news-item " + size}>
         <div className="current-news-img">
@@ -46,6 +52,7 @@ export function News({content, size, setTabValue}) {
         </div>
       </div>
     }
+    {/* если передан айди и тип instagram */}
     {(newsId && content.news[newsId].type === 'instagram') && 
       // <InstagramNews news={content.news[newsId]} size={size} />
       <div className={"current-news-item " + size}>

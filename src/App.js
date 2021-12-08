@@ -25,10 +25,11 @@ import {
   Route,
 } from "react-router-dom";
 
-
+// создание объекта глобального контекста
 export const ContentContext = React.createContext({})
 
 function App() {
+  // инициализация темы для материал юай, и функции для её изменения
   const [theme, setTheme] = useState(createTheme({
     palette: {
       primary: {
@@ -38,28 +39,41 @@ function App() {
     },
   }))
 
+  // функция для компидяции размера экрана
   function formateSize(size){
     if (size >= 1400) return 'lg'
     if (size < 1400 && size >= 900) return 'md'
     return 'sm'
   }
 
+  // контент с сервера и функция для его изменения
   const [content, setContent] = useState(null)
+  // текущий размер экрана и функция для его изменения
   const [size, setSize] = useState(formateSize(window.innerWidth))
+  // положение бегунка в верхнем меню и функция для изменения
   const [tabValue, setTabValue] = useState(0)
+  // текущий выбранный специалист и функция для изменения
   const [currentUser, setCurrentUser] = useState(null)
+  // объект всех специалистов и функция для изменения
   const [users, setUsers] = useState({})
 
   useEffect(() => {
+    // заглушка для возраста, чтобы отображался виджет
     localStorage.age = 18
+    // установка слушателя изменения размера экрана
     window.addEventListener('resize', () => {
       setSize(formateSize(window.innerWidth))
     })
+    // получения контента с сервера
     getContent().then(res => {
       setContent(res.data)
+      // установка заголовка страницы из контента
       document.title = res.data.nameClient
+      // установка темы из полученных данных
       if (res.data.siteThemeColor) {
+        // переопределение глобальной переменной css
         document.documentElement.style.setProperty("--primary-site-color", res.data.siteThemeColor)
+        // переопределение темы material ui
         setTheme(createTheme({
           palette: {
             primary: {
@@ -74,8 +88,11 @@ function App() {
   return (
     <Router>
       <div className="App">
+        {/* провайдер контекста приложения */}
         <ContentContext.Provider value={{content, size}}>
+          {/* провайдер темы для компонентов material ui */}
           <ThemeProvider theme={theme}>
+            {/* отображать лоадер пока данные не получены */}
             {!content && <Loader />}
             {content && 
               <>

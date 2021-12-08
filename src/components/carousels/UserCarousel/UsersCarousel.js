@@ -10,13 +10,17 @@ import { ContentContext } from '../../../App';
 import './style.css'
 
 export function UsersCarousel({setUser, setUsersStore}){
+  // получение функции для внутреннего роутинга
   const navigate = useNavigate()
+  // получение текущего размера экрана из контекста
   const {size} = useContext(ContentContext)
+  // установка количества элементов в карусели
   let perPage = 7
   if (size === 'md') perPage = 5
   if (size === 'sm') perPage = 1
-
+  // установка массива врачей и функции его изменения 
   const [users, setUsers] = useState([])
+  // установка случайных врачей для карусели
   const sortUsers = (users) => {
     const sortUsers = []
     const keys = Object.keys(users).sort(() => (Math.random() - 0.5))
@@ -25,13 +29,17 @@ export function UsersCarousel({setUser, setUsersStore}){
     }
     return sortUsers
   }
+  // роутинг по клику на кнопку Все врачи
   const clickHandler = (id) => {
     setUser(id)
     navigate('/users')
   }
+  // получение врачей с сервера
   useEffect(() => {
     getUsers().then(res => {
+      // установка локального состояния с врачами
       setUsers(sortUsers(res.data.users))
+      // установка глобального состояния с врачами, для использования на странице со всеми врачами
       setUsersStore(res.data.users)
     })
   }, [setUsersStore])
@@ -51,8 +59,7 @@ export function UsersCarousel({setUser, setUsersStore}){
           <SplideSlide key={user.id}>
             <div className={"users-carousel-item " + size} key={user.id} onClick={() => {clickHandler(user.id)}}>
               <img 
-                src={window.apiConfig.url + '/file/get-user-photo?idUser=' + user.id} 
-                // data-splide-lazy={window.apiConfig.url + '/file/get-user-photo?idUser=' + user.id}
+                src={window.apiConfig.url + '/file/get-user-photo?idUser=' + user.id}
                 alt="user"
               />
               <br />

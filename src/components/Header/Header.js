@@ -10,15 +10,15 @@ import { ContentContext } from '../../App';
 import './style.css'
 
 export default function Header({value, setValue}){
-
+  // состояние отображения бокового меню и функция его обновления
   const [openMenu, setOpenMenu] = useState(false)
-
+  // функция открытия/закрытия бокового меню
   function toggleMenu (open) {
     setOpenMenu(open)
   }
-
+  // определения контента и текущего размера экрана из объекта контекста
   const {content, size} = useContext(ContentContext)
-
+  // функция изменения положения бегунка в меню
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };

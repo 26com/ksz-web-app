@@ -5,7 +5,9 @@ import './style.css'
 
 export default function CustomButton({variant, href, localHref, children}) {
   const navigate = useNavigate()
+  // обработчик нажатия кнопки
   const clickHandler = () => {
+    // разделение абсолютных и относительных ссылок
     if (href) window.location = href
     if (localHref) navigate(localHref)
   }

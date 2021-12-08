@@ -2,9 +2,12 @@ import Tab from '@mui/material/Tab';
 import { styled } from '@mui/styles';
 import { useNavigate } from "react-router-dom";
 
+// кастомизация компонента Material UI
 function LinkTab(props) {
+  // получение функции навигации
   const navigate = useNavigate()
   return (
+    // инициализация компонента
     <Tab
       component="a"
       onClick={(event) => {
@@ -19,7 +22,7 @@ function LinkTab(props) {
     />
   );
 }
-
+// определение кастомных стилей
 const CustomTab = styled(LinkTab)({
   fontSize: '1em !important',
   textTransform: 'none !important',
